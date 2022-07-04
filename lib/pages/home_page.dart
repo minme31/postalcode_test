@@ -17,8 +17,10 @@ class HomePage extends StatelessWidget {
             child: TextFormField(
               decoration: const InputDecoration(
                 label: Text('郵便番号'),
-                hintText: '郵便番号７桁（ハイフンあり・なし可）',
+                helperText: '郵便番号７桁（ハイフンあり・なし可）',
+                hintText: '000-1234',
                 border: OutlineInputBorder(),
+                prefix: Text('〒'),
               ),
               keyboardType: TextInputType.number,
             ),
