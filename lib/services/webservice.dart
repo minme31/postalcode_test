@@ -7,7 +7,14 @@ class WebService {
     // TODO: PostalCodeを使うように修正
     String url = "https://zipcloud.ibsnet.co.jp/api/search?zipcode=7830060";
     final response = await http.get(Uri.parse(url));
-
-    // 取得できたJSON形式の文字列を、AddressModelに変換する処理
+    print(response);
+    if (response.statusCode == 200) {
+      final json = response.body;
+      // 取得できたJSON形式の文字列を、AddressModelに変換する処理
+      print(json);
+      return AddressModel("123", "Test", "test", "test");
+    } else {
+      throw Exception('Error');
+    }
   }
 }

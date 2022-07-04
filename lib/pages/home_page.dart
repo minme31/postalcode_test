@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:postalcode_test/services/webservice.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -29,7 +30,9 @@ class HomePage extends StatelessWidget {
             height: 16,
           ),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () async {
+              await WebService.getAddress('test');
+            },
             child: const Text('郵便番号から住所を検索'),
           ),
           const SizedBox(
