@@ -7,9 +7,9 @@ class AddressModel {
   AddressModel(this.zipCode, this.prefecture, this.city, this.line1);
 
   AddressModel.fromJson(Map<String, dynamic> map) {
-    this.zipCode = 'test';
-    this.prefecture = 'pref';
-    this.city = 'test';
-    this.line1 = 'test';
+    zipCode = map['zipcode'];
+    prefecture = map['address1'];
+    city = map['address2'];
+    line1 = map['address3'];
   }
 }
