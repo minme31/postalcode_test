@@ -6,7 +6,7 @@ class AddressModel {
 
   AddressModel(this.zipCode, this.prefecture, this.city, this.line1);
 
-  AddressModel.fromJson(Map<String, String> map) {
+  AddressModel.fromJson(Map<String, dynamic> map) {
     this.zipCode = 'test';
     this.prefecture = 'pref';
     this.city = 'test';

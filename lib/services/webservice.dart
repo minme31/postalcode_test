@@ -18,11 +18,13 @@ class WebService {
       // dartで扱うため、Mapの形に変換する。
       final json = jsonDecode(jsonRaw) as Map<String, dynamic>;
       final jsonResults = json['results'];
-      final results = <Map<String, String>>[];
+      final results = <Map<String, dynamic>>[];
       if (jsonResults is List) {
         for (final result in jsonResults) {
-          if (result is Map<String, String>) {
+          if (result is Map<String, dynamic>) {
             results.add(result);
+          } else {
+            print('not a map<String, String>');
           }
         }
       } else {
